@@ -32,7 +32,7 @@ public class FakeUserAdapter implements UserPort {
 
     @Override
     public Option<User.Id> create(User user) {
-        if (user.getId() != null) {
+        if (user.getId() != null || user.getPseudonym() == null || user.getPseudonym().isBlank()) {
             throw new IllegalArgumentException();
         } else if (users.exists(t -> t._2.getPseudonym().equals(user.getPseudonym()))) {
             return None();

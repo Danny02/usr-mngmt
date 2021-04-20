@@ -4,6 +4,7 @@ import dev.nullzwo.user.domain.model.Role;
 import dev.nullzwo.user.domain.model.User;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.OnDelete;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.HashSet;
