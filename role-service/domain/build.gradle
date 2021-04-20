@@ -1,0 +1,5 @@
+dependencies {
+    implementation 'io.vavr:vavr:0.10.3'
+    testImplementation 'org.assertj:assertj-core:3.19.0'
+    testImplementation 'org.assertj:assertj-vavr:0.4.1'
+}
