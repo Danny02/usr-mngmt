@@ -1,0 +1,11 @@
+@import scala.collection.IndexedSeq
+@(users: IndexedSeq[UserChanges])
+
+@main("User Change Log") {
+  <h1>User Change Log</h1>
+  <ul>
+  @for(u <- users) {
+      <li><a href="/changes/@u.id"><b>@u.pseudonym</b> with <b>@u.eventCount</b> change(s)</a></li>
+  }
+  </ul>
+}

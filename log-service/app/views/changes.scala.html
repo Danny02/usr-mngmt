@@ -1,0 +1,12 @@
+@import scala.collection.IndexedSeq
+@(changes: IndexedSeq[Change])
+
+@main("Change Log") {
+  <h1>Change Log of @changes.head.pseudonym</h1>
+  <a href="/">home</a>
+  <ul>
+  @for(c <- changes) {
+      <li>@c.instant @c.event</li>
+  }
+  </ul>
+}
