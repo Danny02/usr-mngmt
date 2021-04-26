@@ -8,7 +8,8 @@ A small example of a microservice architecture with different Technologies.
 
 ### Role-Service
 
-A Maven(3.8.1) Java 11 project.
+A Gradle Java 11 project.
+
 ### Log-Service
 
 A SBT Scala project which uses Java 11.
