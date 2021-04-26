@@ -1,5 +1,7 @@
 # User Management Service
 
+[![build status](https://github.com/Danny02/usr-mngmt/actions/workflows/build.yml/badge.svg)](https://github.com/Danny02/usr-mngmt/actions/workflows/build.yml)
+
 A small example of a microservice architecture with different Technologies.
 
 ## Requirements
