@@ -43,6 +43,7 @@ jobs:
       uses: coursier/cache-action@v5
     - name: Build and test
       run: |
+        cd log-service
         sbt -v +test
         rm -rf "$HOME/.ivy2/local" || true
         find $HOME/Library/Caches/Coursier/v1        -name "ivydata-*.properties" -delete || true
@@ -73,5 +74,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install and npm run build
       run: |
+        cd user-ui
         npm ci
         npm run build
