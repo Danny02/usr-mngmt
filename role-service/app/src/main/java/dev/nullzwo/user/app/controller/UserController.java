@@ -14,6 +14,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import static org.springframework.http.ResponseEntity.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping(produces = {"application/hal+json", "application/json"})
 public class UserController {
     public static final String USER_PATH = "/user";

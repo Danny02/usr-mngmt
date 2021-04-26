@@ -1,0 +1,28 @@
+<main>
+  <h1>Users</h1>
+  <div>
+    <div>Creat another User:</div>
+    <mat-form-field>
+      <input #pseudo matInput placeholder="Pseudonym">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="create(pseudo)">Create</button>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let user of data">
+      <mat-expansion-panel-header>
+        <mat-panel-title><b>{{user.pseudonym}}</b></mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="container">
+        <mat-select [value]="nonAdminRole(user)" placeholder="-- None --" (selectionChange)="roleSelected($event, user)">
+          <mat-option>-- None --</mat-option>
+          <mat-option value="CONTRACT_READ">Read</mat-option>
+          <mat-option value="CONTRACT_WRITE">Write</mat-option>
+          <mat-option value="SIGNATORY">Signatory</mat-option>
+        </mat-select>
+        <mat-checkbox [checked]="isAdmin(user)" (change)="adminChanged($event, user)">
+          Admin
+        </mat-checkbox>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</main>
